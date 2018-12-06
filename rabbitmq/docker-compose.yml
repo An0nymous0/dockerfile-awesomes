@@ -1,0 +1,20 @@
+version: '3.7'
+
+services:
+
+  rabbitmq:
+    image: build dockerfile的镜像名
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+    hostname: rabbitmq
+    volumes:
+      - $PWD/rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+      - $PWD/rabbitmq/data:/var/lib/rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    deploy:
+      restart_policy:
+        condition: on-failure
