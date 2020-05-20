@@ -1,4 +1,4 @@
-FROM adoptopenjdk:8-jdk-openj9
+FROM an0nymous/openjdk8-openj9:slim
 
 ENV CATALINA_HOME /usr/local/tomcat
 ENV PATH $CATALINA_HOME/bin:$PATH
