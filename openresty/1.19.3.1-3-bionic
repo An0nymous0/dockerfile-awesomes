@@ -1,5 +1,6 @@
 # Dockerfile - Ubuntu Bionic
 # https://github.com/openresty/docker-openresty
+# from https://github.com/openresty/docker-openresty/blob/master/bionic/Dockerfile
 
 ARG RESTY_IMAGE_BASE="ubuntu"
 ARG RESTY_IMAGE_TAG="bionic"
