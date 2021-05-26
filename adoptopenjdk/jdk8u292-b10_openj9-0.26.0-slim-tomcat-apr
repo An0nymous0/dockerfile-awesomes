@@ -1,7 +1,7 @@
 FROM adoptopenjdk/openjdk8-openj9:jdk8u292-b10_openj9-0.26.0-slim
 LABEL maintainer=xu.gao@aliyun.cn
 RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list && apt-get update
-RUN apt-get install -y libfontconfig1 tzdata locales libapr1 libapr1-dev gcc make
+RUN apt-get install -y libfontconfig1 tzdata locales libapr1 libapr1-dev libssl-dev gcc make
 ENV TZ=Asia/Shanghai
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN locale-gen zh_CN.UTF-8 &&\
