@@ -12,7 +12,7 @@ ENV LANGUAGE zh_CN:zh
 ENV LC_ALL zh_CN.UTF-8
 # -Djava.library.path=/usr/local/apr/lib
 RUN cd /tmp; \
-    wget https://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-connectors/native/1.2.28/source/tomcat-native-1.2.28-src.tar.gz
+    curl https://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-connectors/native/1.2.28/source/tomcat-native-1.2.28-src.tar.gz -o tomcat-native-1.2.28-src.tar.gz \
     && tar zxvf tomcat-native-1.2.28-src.tar.gz \
     && tomcat-native-1.2.28-src/native \
     && ./configure && make && make install
