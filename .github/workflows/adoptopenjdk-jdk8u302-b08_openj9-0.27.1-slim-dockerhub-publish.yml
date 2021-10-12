@@ -23,6 +23,7 @@ jobs:
     - name: Build and push
       uses: docker/build-push-action@v2
       with:
-        context: adoptopenjdk/jdk8u302-b08_openj9-0.27.0-slim
+        context: .
+        file: adoptopenjdk/jdk8u302-b08_openj9-0.27.0-slim
         push: true
         tags: an0nymous/openjdk8-openj9:jdk8u302-b08_openj9-0.27.0-slim
