@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk8-openj9:jdk8u302-b08_openj9-0.27.1-slim
+FROM adoptopenjdk/openjdk8-openj9:jdk8u302-b08_openj9-0.27.0-slim
 LABEL maintainer=xu.gao@aliyun.cn
 RUN sed -i 's/archive.ubuntu.com/mirrors.aliyun.com/g' /etc/apt/sources.list && apt-get update
 RUN apt-get install -y libfontconfig1 tzdata locales
