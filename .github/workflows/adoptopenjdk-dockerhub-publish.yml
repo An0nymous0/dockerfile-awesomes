@@ -6,8 +6,11 @@ on:
       filename:
         description: 'dockerfile path'
         required: true
-      push_tags:
-        description: 'push tags name'
+      image_tag:
+        description: 'push tag name'
+        required: true
+      jdk_version:
+        description: 'jdk version'
         required: true
 
 jobs:
@@ -32,4 +35,4 @@ jobs:
         context: .
         file: adoptopenjdk/${{ github.event.inputs.filename }}
         push: true
-        tags: an0nymous/${{ github.event.inputs.push_tags }}
+        tags: an0nymous/openjdk${{ github.event.inputs.jdk_version }}-openj9:${{ github.event.inputs.image_tag }}
