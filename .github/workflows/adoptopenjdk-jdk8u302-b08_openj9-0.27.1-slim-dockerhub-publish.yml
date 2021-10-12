@@ -12,7 +12,7 @@ jobs:
     steps:
     - name: Build the Docker image
       run: |
-           ls ../
+           ls ../../
            pwd
            docker build -f ./adoptopenjdk/jdk8u302-b08_openj9-0.27.1-slim -t an0nymous/openjdk8-openj9:jdk8u302-b08_openj9-0.27.1-slim .
     - name: Login to Docker Hub
