@@ -1,7 +1,14 @@
 name: AdoptopenJDK Docker Image CI
 
-on: workflow_dispatch
-
+on:
+  workflow_dispatch:
+    inputs:
+      filename:
+        description: 'dockerfile path'
+        required: true
+      push_tags:
+        description: 'push tags name'
+        required: true
 
 jobs:
 
@@ -23,6 +30,6 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
-        file: adoptopenjdk/jdk8u302-b08_openj9-0.27.0-slim
+        file: adoptopenjdk/${{ github.event.inputs.filename }}
         push: true
-        tags: an0nymous/openjdk8-openj9:jdk8u302-b08_openj9-0.27.0-slim
+        tags: an0nymous/${{ github.event.inputs.push_tags }}
