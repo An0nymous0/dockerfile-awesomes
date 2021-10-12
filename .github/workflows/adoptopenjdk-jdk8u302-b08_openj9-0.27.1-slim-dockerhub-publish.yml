@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Build the Docker image
-      run: docker build . --file ~/adoptopenjdk/jdk8u302-b08_openj9-0.27.1-slim --tag an0nymous/openjdk8-openj9:jdk8u302-b08_openj9-0.27.1-slim
+      run: docker build . --file ../adoptopenjdk/jdk8u302-b08_openj9-0.27.1-slim --tag an0nymous/openjdk8-openj9:jdk8u302-b08_openj9-0.27.1-slim
       with:
         registry: an0nymous/openjdk8-openj9:jdk8u302-b08_openj9-0.27.1-slim
         username: 1
