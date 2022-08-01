@@ -1,0 +1,7 @@
+FROM ibm-semeru-runtimes:open-17.0.3_7-jre-centos7
+LABEL maintainer=xu.gao@aliyun.cn
+
+# 设置时区
+RUN ln -sf /usr/share/zoneinfo/Asia/ShangHai /etc/localtime
+RUN echo "Asia/Shanghai" > /etc/timezone
+RUN dpkg-reconfigure -f noninteractive tzdata
